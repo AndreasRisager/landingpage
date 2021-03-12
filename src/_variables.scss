@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+$fontStack: "Raleway", Helvetica, Verdana, Arial, sans-serif;
+$fontSize: calc(16px + (21 - 16) * (100vw - 412px) / (1920 - 412));
+
+$backgroundColor: hsl(0, 0%, 97%);
+$textColor: hsl(0, 0%, 8%);
+$primaryColor: rgb(5, 127, 184);
+$secondaryColor: rgb(29, 67, 172);

@@ -1,0 +1,73 @@
+@import "../variables";
+
+.planCard {
+   border: 1px solid #EEE;
+   flex: 1;
+   max-width: 20%;
+   &__title {
+      background-color: $primaryColor;
+      color: $backgroundColor;
+      text-align: center;
+      padding: 1em 0.5em 0;
+
+      .title__heading {
+         color: $textColor;
+         text-transform: uppercase;
+         border-bottom: 1px solid $textColor;
+         padding-bottom: 1em;
+         max-width: 80%;
+         text-align: center;
+         margin: 0 auto;
+      }
+      .title__summary {
+         font-weight: 700;
+      }
+      .title__price {
+         font-size: 300%;
+         font-weight: 700;
+         &::first-letter {
+            font-size: 40%;
+            vertical-align: super;
+         }
+      }
+      .title__conditions {
+         font-weight: 700;
+         font-size: 80%;
+      }
+      .title__link {
+         background: linear-gradient($secondaryColor, $primaryColor);
+         padding: 0.5em 1em;
+         color: $backgroundColor;
+         text-decoration: none;
+         font-weight: 700;
+         display: inline-block;
+         transform: translateY(0.9em);
+         &--caps {
+            text-transform: uppercase;
+         }
+      }
+   }
+   &__features {
+      background-color: #FFF;
+      padding: 1em 0.5em;
+      .features__heading {
+         text-align: center;
+         text-transform: uppercase;
+         font-size: 80%;
+         margin: 1em 0;
+      }
+      .features__getfrom {
+         font-size: 80%;
+         color: hsl(0, 0%, 30%);
+         font-weight: 700;
+      }
+      .features__list {
+         list-style: none;
+         &Item {
+            margin: 0.5em 0;
+            font-size: 80%;
+            color: hsl(0, 0%, 30%);
+         }
+      }
+   }
+}

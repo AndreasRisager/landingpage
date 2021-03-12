@@ -1,0 +1,11 @@
+.pitch {
+   padding: 0 2em;
+   margin: 2em 0;
+   text-align: center;
+   &__heading {
+      padding-bottom: 1em;
+   }
+   &__copy {
+      padding-bottom: 1em;
+   }
+}
