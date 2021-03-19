@@ -14,7 +14,7 @@ export default function PlanCard({ heading, summary, price, link, features, getf
          <section className="planCard__features">
             { getfrom ? <> <p className="features__getfrom">Get all {getfrom} features</p><h2 className="features__heading">Plus</h2> </> : <h2 className="features__heading">Features</h2> }
             <ul className="features__list">
-               {features.map(feature => <li className="features__listItem">{feature}</li>)}
+               {features.map(feature => <li className="features__listItem" key={feature}>{feature}</li>)}
             </ul>
          </section>
       </article>

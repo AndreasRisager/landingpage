@@ -9,6 +9,11 @@ body {
    font-family: $fontStack;
    background-color: $backgroundColor;
    color: $textColor;
+   &.modal--open {
+      height: 100vh;
+      overflow-y: hidden;
+      padding-right: 15px;
+   }
 }
 img {
    width: 100%;

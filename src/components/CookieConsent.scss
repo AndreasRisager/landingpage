@@ -1,0 +1,98 @@
+@import "../variables";
+
+.overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(58, 58, 58, 0.726);
+   z-index: 1000;
+   backdrop-filter: blur(2px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.cookieConsentModal {
+   width: 60vw;
+   max-width: 600px;
+   height: 50vh;
+   background-color: $backgroundColor;
+   display: flex;
+   flex-direction: column;
+   &__header {
+      background-color: $primaryColor;
+      color: $backgroundColor;
+      padding: 1em;
+   }
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      flex-grow: 2;
+      padding: 1em;
+   }
+   input[type="checkbox"] {
+      visibility: hidden;
+      width: 1px;
+      height: 1px;
+      display: none;
+      &:checked + .consentToggle {
+         background-color: hsl(120, 20%, 70%);
+      }
+      &:checked + .consentToggle::after {
+         transform: translateX(1.3em);
+         background-color: green;
+      }
+      &:disabled + .consentToggle {
+         opacity: 0.6;
+      }
+      &:disabled + .consentToggle::after {
+         opacity: 0.6;
+      }
+   }
+   .consentToggle {
+      display: inline-block;
+      width: 2.3em;
+      height: 1em;
+      border-radius: 0.5em;
+      background-color: lightgrey;
+      transition: background-color 200ms ease;
+      &::after {
+         content: "";
+         display: block;
+         width: 1em;
+         height: 1em;
+         border-radius: 50%;
+         background-color: grey;
+         transition: transform 200ms ease, background-color 200ms ease;
+      }
+   }
+   table {
+      flex-grow: 2;
+      p {
+         margin: 1em 0;
+      }
+      tr td:first-of-type {
+         width: 30%;
+         text-align: center;
+      }
+   }
+   .content__buttons {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-around;
+      .buttons__button {
+         height: 3em;
+         width: 8em;
+         background-color: lightgrey;
+         border: none;
+         border-radius: 5px;
+         &--highlight {
+            background-color: green;
+            color: $backgroundColor;
+            font-weight: 700;
+         }
+      }
+   }
+}
